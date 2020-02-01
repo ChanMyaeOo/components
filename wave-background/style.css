@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+}
+.wave{
+    position: relative;
+    background: linear-gradient(45deg, #00f2a1, #4d2dd2);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wave h1{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #f2f2f2;
+    letter-spacing: 5px;
+    word-spacing: 20px;
+    text-align: center;
+}
+
+.wave::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 210px;
+    background: url(wave.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
