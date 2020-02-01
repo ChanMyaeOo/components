@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/f494066f73.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Main Navbar</title>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="wrapper">
+        <nav class="nav-container" id="navbar">
+            <div class="logo" id="logo">
+                
+                Chan Myae Oo
+            </div>
+            <div class="desk" id="desk">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Passion</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="mob">
+                <div class="icon-wrap">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+                <ul>
+                    <li class="show-nav"><a href="#">About</a></li>
+                    <li><a href="#">Passion</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <script 
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        let navbar = document.getElementById("navbar");
+        let desk = document.getElementById("desk");
+        let logo = document.getElementById("logo");
+        window.onscroll = ()=>{
+            if(window.pageYOffset > 100){
+                navbar.style.background = "rgba(35, 32, 32, 0.8)";
+                navbar.style.height = "60px";
+                desk.style.paddingTop = "0px";
+                logo.style.paddingTop = "0px";
+            }else{
+                navbar.style.background = "transparent";
+                navbar.style.height = "80px";
+                desk.style.paddingTop = "5px";
+                logo.style.paddingTop = "5px";
+            }
+        }
+
+        // JQuery section
+        $(document).ready(function(){
+            $(".mob .fa-times").hide();
+
+            $(".mob .fa-bars").click(function(){
+                $(this).hide();
+                $(".mob .fa-times").show();
+                $(".mob ul").addClass("show-nav");
+            })
+
+            $(".mob .fa-times").click(function(){
+                $(this).hide();
+                $(".mob .fa-bars").show();
+                $(".mob ul").removeClass("show-nav");
+            })
+        });
+    </script>
+</body>
+</html>
