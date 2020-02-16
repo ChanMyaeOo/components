@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  width: 100%;
+  height: 15vh;
+  background-color: aqua;
+  color: #f2f2f2;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 650px;
+  margin: 0 auto;
+  height: 300px;
+}
+
+.list {
+  width: 100%;
+  height: 35px;
+  background: grey;
+  color: #f2f2f2;
+  border-bottom: 1px solid pink;
+  margin: 20px 0;
+  border-radius: 3px;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 30px;
+  height: 30px;
+  background: cornflowerblue;
+}
